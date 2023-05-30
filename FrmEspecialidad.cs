@@ -26,5 +26,10 @@ namespace pryPonssaSP1ER._2
         {
 
         }
+
+        private void lblCodigo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
