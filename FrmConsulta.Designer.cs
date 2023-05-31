@@ -30,10 +30,10 @@
         {
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lstEspecialidades = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMedicos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEspecialidad
@@ -55,19 +55,19 @@
             this.lstEspecialidades.TabIndex = 1;
             this.lstEspecialidades.SelectedIndexChanged += new System.EventHandler(this.lstEspecialidades_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dgvMedicos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 339);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvMedicos.Location = new System.Drawing.Point(22, 99);
+            this.dgvMedicos.Name = "dgvMedicos";
+            this.dgvMedicos.ReadOnly = true;
+            this.dgvMedicos.RowHeadersWidth = 62;
+            this.dgvMedicos.RowTemplate.Height = 28;
+            this.dgvMedicos.Size = new System.Drawing.Size(544, 339);
+            this.dgvMedicos.TabIndex = 2;
             // 
             // Column1
             // 
@@ -90,14 +90,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMedicos);
             this.Controls.Add(this.lstEspecialidades);
             this.Controls.Add(this.lblEspecialidad);
             this.Name = "FrmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de médicos por especialidad";
             this.Load += new System.EventHandler(this.FrmConsulta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,7 +107,7 @@
 
         private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.ComboBox lstEspecialidades;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMedicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
