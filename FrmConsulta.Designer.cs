@@ -53,6 +53,7 @@
             this.lstEspecialidades.Name = "lstEspecialidades";
             this.lstEspecialidades.Size = new System.Drawing.Size(159, 28);
             this.lstEspecialidades.TabIndex = 1;
+            this.lstEspecialidades.SelectedIndexChanged += new System.EventHandler(this.lstEspecialidades_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -95,6 +96,7 @@
             this.Name = "FrmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de médicos por especialidad";
+            this.Load += new System.EventHandler(this.FrmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
