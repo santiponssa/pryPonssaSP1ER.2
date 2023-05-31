@@ -20,19 +20,27 @@ namespace pryPonssaSP1ER._2
 
         private void lstEspecialidades_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string codEsp;
+            string nombreEsp;
             string lineaEsp;
             StreamReader srEsp = new StreamReader("Especialidades.txt");
-            StreamReader srMed = new StreamReader("Medicos.txt");
-
-            while (srEsp.EndOfStream == false)
+            lineaEsp = srEsp.ReadLine();
+            nombreEsp = lineaEsp.Split(',')[1];
+            while (lstEspecialidades.Text != nombreEsp)
             {
-                lineaEsp = srEsp.ReadLine();
+                srEsp.ReadLine();
+            }
+            while (lstEspecialidades.Text == nombreEsp)
+            {
+                string codEsp;
                 codEsp = lineaEsp.Split(',')[0];
-                if (lstEspecialidades.SelectedItem == codEsp)
+                string codMed;
+                string lineaMed;
+                StreamReader srMed = new StreamReader("Medicos.txt");
+                lineaMed = srMed.ReadLine();
+                codMed = lineaMed.Split(',')[2];
+                if (codEsp == codMed)
                 {
-
-                    dgvMedicos.Rows.Add();
+                    dgvMedicos.Rows.Add(lineaMed.Split(',')[0], lineaMed.Split(',')[1]);
                 }
             }
             srEsp.Close();
