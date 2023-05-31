@@ -33,15 +33,17 @@
             this.dgvMedicos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEspecialidad
             // 
             this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Location = new System.Drawing.Point(34, 46);
+            this.lblEspecialidad.Location = new System.Drawing.Point(23, 30);
+            this.lblEspecialidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(99, 20);
+            this.lblEspecialidad.Size = new System.Drawing.Size(67, 13);
             this.lblEspecialidad.TabIndex = 0;
             this.lblEspecialidad.Text = "Especialidad";
             // 
@@ -49,9 +51,10 @@
             // 
             this.lstEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstEspecialidades.FormattingEnabled = true;
-            this.lstEspecialidades.Location = new System.Drawing.Point(148, 43);
+            this.lstEspecialidades.Location = new System.Drawing.Point(99, 28);
+            this.lstEspecialidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstEspecialidades.Name = "lstEspecialidades";
-            this.lstEspecialidades.Size = new System.Drawing.Size(159, 28);
+            this.lstEspecialidades.Size = new System.Drawing.Size(107, 21);
             this.lstEspecialidades.TabIndex = 1;
             this.lstEspecialidades.SelectedIndexChanged += new System.EventHandler(this.lstEspecialidades_SelectedIndexChanged);
             // 
@@ -61,12 +64,13 @@
             this.dgvMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvMedicos.Location = new System.Drawing.Point(22, 99);
+            this.dgvMedicos.Location = new System.Drawing.Point(15, 64);
+            this.dgvMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.ReadOnly = true;
             this.dgvMedicos.RowHeadersWidth = 62;
             this.dgvMedicos.RowTemplate.Height = 28;
-            this.dgvMedicos.Size = new System.Drawing.Size(544, 339);
+            this.dgvMedicos.Size = new System.Drawing.Size(363, 220);
             this.dgvMedicos.TabIndex = 2;
             // 
             // Column1
@@ -85,14 +89,26 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
             // 
+            // btnConsultar2
+            // 
+            this.btnConsultar2.Location = new System.Drawing.Point(232, 25);
+            this.btnConsultar2.Name = "btnConsultar2";
+            this.btnConsultar2.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultar2.TabIndex = 3;
+            this.btnConsultar2.Text = "Consultar";
+            this.btnConsultar2.UseVisualStyleBackColor = true;
+            this.btnConsultar2.Click += new System.EventHandler(this.btnConsultar2_Click);
+            // 
             // FrmConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 450);
+            this.ClientSize = new System.Drawing.Size(391, 292);
+            this.Controls.Add(this.btnConsultar2);
             this.Controls.Add(this.dgvMedicos);
             this.Controls.Add(this.lstEspecialidades);
             this.Controls.Add(this.lblEspecialidad);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de médicos por especialidad";
@@ -110,5 +126,6 @@
         private System.Windows.Forms.DataGridView dgvMedicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button btnConsultar2;
     }
 }

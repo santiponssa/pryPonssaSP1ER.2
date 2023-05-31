@@ -20,6 +20,26 @@ namespace pryPonssaSP1ER._2
 
         private void lstEspecialidades_SelectedIndexChanged(object sender, EventArgs e)
         {
+                    
+        }
+
+        private void FrmConsulta_Load(object sender, EventArgs e)
+        {
+            string especialidad;
+            string linea;
+            StreamReader sr = new StreamReader("Especialidades.txt");
+            while (sr.EndOfStream == false)
+            {
+                linea = sr.ReadLine();
+                especialidad = linea.Split(',')[1];
+                lstEspecialidades.Items.Add(especialidad);
+            }
+            sr.Close();
+            sr.Dispose();
+        }
+
+        private void btnConsultar2_Click(object sender, EventArgs e)
+        {
             string nombreEsp;
             string lineaEsp;
             StreamReader srEsp = new StreamReader("Especialidades.txt");
@@ -46,23 +66,7 @@ namespace pryPonssaSP1ER._2
                 srMed.Dispose();
             }
             srEsp.Close();
-            srEsp.Dispose();            
+            srEsp.Dispose();
         }
-
-        private void FrmConsulta_Load(object sender, EventArgs e)
-        {
-            string especialidad;
-            string linea;
-            StreamReader sr = new StreamReader("Especialidades.txt");
-            while (sr.EndOfStream == false)
-            {
-                linea = sr.ReadLine();
-                especialidad = linea.Split(',')[1];
-                lstEspecialidades.Items.Add(especialidad);
-            }
-            sr.Close();
-            sr.Dispose();
-        }
-
     }
 }
