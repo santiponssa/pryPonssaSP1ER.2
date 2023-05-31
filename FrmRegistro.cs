@@ -166,5 +166,10 @@ namespace pryPonssaSP1ER._2
                 e.Handled = true;
             }
         }
+
+        private void FrmRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

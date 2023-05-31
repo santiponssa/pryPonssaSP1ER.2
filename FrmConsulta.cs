@@ -42,25 +42,11 @@ namespace pryPonssaSP1ER._2
                 {
                     dgvMedicos.Rows.Add(lineaMed.Split(',')[0], lineaMed.Split(',')[1]);
                 }
+                srMed.Close();
+                srMed.Dispose();
             }
             srEsp.Close();
-            srEsp.Dispose();
-            //string linea;
-            //int codEsp;
-            //int codEspMed;
-            //while (lstEspecialidades.SelectedItem != )
-            //{
-
-            //StreamReader srEsp = new StreamReader("Especialidades.txt");
-            //linea = srEsp.ReadLine();
-            //StreamReader srMed = new StreamReader("Medicos.txt");
-            //srMed.ReadLine();
-
-            //srEsp.Close();
-            //srMed.Close();
-            //srEsp.Dispose();
-            //srMed.Dispose();
-            //}
+            srEsp.Dispose();            
         }
 
         private void FrmConsulta_Load(object sender, EventArgs e)
