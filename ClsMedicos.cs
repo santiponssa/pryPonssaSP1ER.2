@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace pryPonssaSP1ER._2
 {
-    public class ClsEspecialidades
+    public class ClsMedicos
     {
-        public int NumeroEsp { get; set; }
+        public int Matricula { get; set; }
         public string Nombre { get; set; }
-        public void Registrar ()
-        {
+        public int NumeroEsp { get; set; }
 
-        }
     }
 }

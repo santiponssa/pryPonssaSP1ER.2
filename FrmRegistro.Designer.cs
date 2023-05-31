@@ -1,6 +1,6 @@
 ﻿namespace pryPonssaSP1ER._2
 {
-    partial class FrmEspecialidad
+    partial class FrmRegistro
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,99 +28,215 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblNumeroEsp = new System.Windows.Forms.Label();
+            this.lblNombreEsp = new System.Windows.Forms.Label();
+            this.txtNombreEsp = new System.Windows.Forms.TextBox();
+            this.txtNumeroEsp = new System.Windows.Forms.TextBox();
+            this.btnRegistrarEsp = new System.Windows.Forms.Button();
+            this.mrcEspecialidades = new System.Windows.Forms.GroupBox();
+            this.mrcMedicos = new System.Windows.Forms.GroupBox();
+            this.btnRegistrarMed = new System.Windows.Forms.Button();
+            this.lblEspMedico = new System.Windows.Forms.Label();
+            this.txtCodEspMed = new System.Windows.Forms.TextBox();
+            this.txtMatricula = new System.Windows.Forms.TextBox();
+            this.lblMatricula = new System.Windows.Forms.Label();
+            this.lblNombreMed = new System.Windows.Forms.Label();
+            this.txtNombreMed = new System.Windows.Forms.TextBox();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.mrcEspecialidades.SuspendLayout();
+            this.mrcMedicos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblCodigo
+            // lblNumeroEsp
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(54, 48);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Código";
-            this.lblCodigo.Click += new System.EventHandler(this.lblCodigo_Click);
+            this.lblNumeroEsp.AutoSize = true;
+            this.lblNumeroEsp.Location = new System.Drawing.Point(26, 42);
+            this.lblNumeroEsp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumeroEsp.Name = "lblNumeroEsp";
+            this.lblNumeroEsp.Size = new System.Drawing.Size(65, 20);
+            this.lblNumeroEsp.TabIndex = 0;
+            this.lblNumeroEsp.Text = "Número";
+            this.lblNumeroEsp.Click += new System.EventHandler(this.lblCodigo_Click);
             // 
-            // lblNombre
+            // lblNombreEsp
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(82, 116);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 20);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombreEsp.AutoSize = true;
+            this.lblNombreEsp.Location = new System.Drawing.Point(26, 96);
+            this.lblNombreEsp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreEsp.Name = "lblNombreEsp";
+            this.lblNombreEsp.Size = new System.Drawing.Size(65, 20);
+            this.lblNombreEsp.TabIndex = 1;
+            this.lblNombreEsp.Text = "Nombre";
             // 
-            // txtNombre
+            // txtNombreEsp
             // 
-            this.txtNombre.Location = new System.Drawing.Point(174, 111);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(148, 26);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombreEsp.Location = new System.Drawing.Point(102, 93);
+            this.txtNombreEsp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreEsp.Name = "txtNombreEsp";
+            this.txtNombreEsp.Size = new System.Drawing.Size(148, 26);
+            this.txtNombreEsp.TabIndex = 3;
             // 
-            // txtCodigo
+            // txtNumeroEsp
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(146, 45);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(148, 26);
-            this.txtCodigo.TabIndex = 4;
+            this.txtNumeroEsp.Location = new System.Drawing.Point(102, 39);
+            this.txtNumeroEsp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNumeroEsp.Name = "txtNumeroEsp";
+            this.txtNumeroEsp.Size = new System.Drawing.Size(148, 26);
+            this.txtNumeroEsp.TabIndex = 4;
             // 
-            // button1
+            // btnRegistrarEsp
             // 
-            this.button1.Location = new System.Drawing.Point(103, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRegistrarEsp.Location = new System.Drawing.Point(82, 162);
+            this.btnRegistrarEsp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrarEsp.Name = "btnRegistrarEsp";
+            this.btnRegistrarEsp.Size = new System.Drawing.Size(112, 35);
+            this.btnRegistrarEsp.TabIndex = 7;
+            this.btnRegistrarEsp.Text = "Registrar";
+            this.btnRegistrarEsp.UseVisualStyleBackColor = true;
+            this.btnRegistrarEsp.Click += new System.EventHandler(this.btnRegistrarEsp_Click);
             // 
-            // button2
+            // mrcEspecialidades
             // 
-            this.button2.Location = new System.Drawing.Point(224, 188);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.mrcEspecialidades.Controls.Add(this.txtNumeroEsp);
+            this.mrcEspecialidades.Controls.Add(this.lblNumeroEsp);
+            this.mrcEspecialidades.Controls.Add(this.btnRegistrarEsp);
+            this.mrcEspecialidades.Controls.Add(this.lblNombreEsp);
+            this.mrcEspecialidades.Controls.Add(this.txtNombreEsp);
+            this.mrcEspecialidades.Location = new System.Drawing.Point(12, 12);
+            this.mrcEspecialidades.Name = "mrcEspecialidades";
+            this.mrcEspecialidades.Size = new System.Drawing.Size(283, 254);
+            this.mrcEspecialidades.TabIndex = 9;
+            this.mrcEspecialidades.TabStop = false;
+            this.mrcEspecialidades.Text = "Especialidades";
             // 
-            // FrmEspecialidad
+            // mrcMedicos
+            // 
+            this.mrcMedicos.Controls.Add(this.btnRegistrarMed);
+            this.mrcMedicos.Controls.Add(this.lblEspMedico);
+            this.mrcMedicos.Controls.Add(this.txtCodEspMed);
+            this.mrcMedicos.Controls.Add(this.txtMatricula);
+            this.mrcMedicos.Controls.Add(this.lblMatricula);
+            this.mrcMedicos.Controls.Add(this.lblNombreMed);
+            this.mrcMedicos.Controls.Add(this.txtNombreMed);
+            this.mrcMedicos.Location = new System.Drawing.Point(323, 12);
+            this.mrcMedicos.Name = "mrcMedicos";
+            this.mrcMedicos.Size = new System.Drawing.Size(340, 254);
+            this.mrcMedicos.TabIndex = 10;
+            this.mrcMedicos.TabStop = false;
+            this.mrcMedicos.Text = "Médicos";
+            // 
+            // btnRegistrarMed
+            // 
+            this.btnRegistrarMed.Location = new System.Drawing.Point(106, 198);
+            this.btnRegistrarMed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistrarMed.Name = "btnRegistrarMed";
+            this.btnRegistrarMed.Size = new System.Drawing.Size(112, 35);
+            this.btnRegistrarMed.TabIndex = 11;
+            this.btnRegistrarMed.Text = "Registrar";
+            this.btnRegistrarMed.UseVisualStyleBackColor = true;
+            this.btnRegistrarMed.Click += new System.EventHandler(this.btnRegistrarMed_Click);
+            // 
+            // lblEspMedico
+            // 
+            this.lblEspMedico.AutoSize = true;
+            this.lblEspMedico.Location = new System.Drawing.Point(26, 148);
+            this.lblEspMedico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEspMedico.Name = "lblEspMedico";
+            this.lblEspMedico.Size = new System.Drawing.Size(136, 20);
+            this.lblEspMedico.TabIndex = 9;
+            this.lblEspMedico.Text = "Cód. Especialidad";
+            // 
+            // txtCodEspMed
+            // 
+            this.txtCodEspMed.Location = new System.Drawing.Point(168, 145);
+            this.txtCodEspMed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodEspMed.Name = "txtCodEspMed";
+            this.txtCodEspMed.Size = new System.Drawing.Size(148, 26);
+            this.txtCodEspMed.TabIndex = 10;
+            // 
+            // txtMatricula
+            // 
+            this.txtMatricula.Location = new System.Drawing.Point(168, 39);
+            this.txtMatricula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Size = new System.Drawing.Size(148, 26);
+            this.txtMatricula.TabIndex = 4;
+            // 
+            // lblMatricula
+            // 
+            this.lblMatricula.AutoSize = true;
+            this.lblMatricula.Location = new System.Drawing.Point(26, 42);
+            this.lblMatricula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMatricula.Name = "lblMatricula";
+            this.lblMatricula.Size = new System.Drawing.Size(73, 20);
+            this.lblMatricula.TabIndex = 0;
+            this.lblMatricula.Text = "Matrícula";
+            // 
+            // lblNombreMed
+            // 
+            this.lblNombreMed.AutoSize = true;
+            this.lblNombreMed.Location = new System.Drawing.Point(26, 96);
+            this.lblNombreMed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreMed.Name = "lblNombreMed";
+            this.lblNombreMed.Size = new System.Drawing.Size(65, 20);
+            this.lblNombreMed.TabIndex = 1;
+            this.lblNombreMed.Text = "Nombre";
+            // 
+            // txtNombreMed
+            // 
+            this.txtNombreMed.Location = new System.Drawing.Point(168, 93);
+            this.txtNombreMed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreMed.Name = "txtNombreMed";
+            this.txtNombreMed.Size = new System.Drawing.Size(148, 26);
+            this.txtNombreMed.TabIndex = 3;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Location = new System.Drawing.Point(216, 283);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(186, 65);
+            this.btnConsultar.TabIndex = 11;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // FrmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 251);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblCodigo);
+            this.ClientSize = new System.Drawing.Size(675, 365);
+            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.mrcMedicos);
+            this.Controls.Add(this.mrcEspecialidades);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmEspecialidad";
+            this.Name = "FrmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro de especialidades";
+            this.Text = "Registro de especialidades y médicos";
+            this.mrcEspecialidades.ResumeLayout(false);
+            this.mrcEspecialidades.PerformLayout();
+            this.mrcMedicos.ResumeLayout(false);
+            this.mrcMedicos.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblNumeroEsp;
+        private System.Windows.Forms.Label lblNombreEsp;
+        private System.Windows.Forms.TextBox txtNombreEsp;
+        private System.Windows.Forms.TextBox txtNumeroEsp;
+        private System.Windows.Forms.Button btnRegistrarEsp;
+        private System.Windows.Forms.GroupBox mrcEspecialidades;
+        private System.Windows.Forms.GroupBox mrcMedicos;
+        private System.Windows.Forms.Label lblEspMedico;
+        private System.Windows.Forms.TextBox txtCodEspMed;
+        private System.Windows.Forms.TextBox txtMatricula;
+        private System.Windows.Forms.Label lblMatricula;
+        private System.Windows.Forms.Label lblNombreMed;
+        private System.Windows.Forms.TextBox txtNombreMed;
+        private System.Windows.Forms.Button btnRegistrarMed;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }
 
