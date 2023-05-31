@@ -75,6 +75,7 @@
             this.txtNombreEsp.Name = "txtNombreEsp";
             this.txtNombreEsp.Size = new System.Drawing.Size(148, 26);
             this.txtNombreEsp.TabIndex = 3;
+            this.txtNombreEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreEsp_KeyPress);
             // 
             // txtNumeroEsp
             // 
@@ -83,6 +84,7 @@
             this.txtNumeroEsp.Name = "txtNumeroEsp";
             this.txtNumeroEsp.Size = new System.Drawing.Size(148, 26);
             this.txtNumeroEsp.TabIndex = 4;
+            this.txtNumeroEsp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroEsp_KeyPress);
             // 
             // btnRegistrarEsp
             // 
@@ -153,6 +155,7 @@
             this.txtCodEspMed.Name = "txtCodEspMed";
             this.txtCodEspMed.Size = new System.Drawing.Size(148, 26);
             this.txtCodEspMed.TabIndex = 10;
+            this.txtCodEspMed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodEspMed_KeyPress);
             // 
             // txtMatricula
             // 
@@ -161,6 +164,7 @@
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(148, 26);
             this.txtMatricula.TabIndex = 4;
+            this.txtMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatricula_KeyPress);
             // 
             // lblMatricula
             // 
@@ -189,6 +193,8 @@
             this.txtNombreMed.Name = "txtNombreMed";
             this.txtNombreMed.Size = new System.Drawing.Size(148, 26);
             this.txtNombreMed.TabIndex = 3;
+            this.txtNombreMed.TextChanged += new System.EventHandler(this.txtNombreMed_TextChanged);
+            this.txtNombreMed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreMed_KeyPress);
             // 
             // btnConsultar
             // 

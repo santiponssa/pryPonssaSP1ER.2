@@ -65,21 +65,22 @@ namespace pryPonssaSP1ER._2
 
         public void RegistrarEspecialidad()
         {
-            StreamWriter sw = new StreamWriter("EspecialidadesMedicos.txt");
+            StreamWriter sw = new StreamWriter("Especialidades.txt", true);
             ClsEspecialidades especialidad = new ClsEspecialidades();
             especialidad.NumeroEsp = int.Parse(txtNumeroEsp.Text);
             especialidad.Nombre = txtNombreEsp.Text;
-            sw.WriteLine();
+            sw.WriteLine(especialidad.NumeroEsp + "," + especialidad.Nombre);
             sw.Close();
             sw.Dispose();
         }
         public void RegistrarMedico()
         {
-            StreamWriter sw = new StreamWriter("EspecialidadesMedicos.txt");
+            StreamWriter sw = new StreamWriter("Medicos.txt", true);
             ClsMedicos medico = new ClsMedicos();
             medico.Matricula = int.Parse(txtMatricula.Text);
             medico.Nombre = txtNombreMed.Text;
             medico.NumeroEsp = int.Parse(txtCodEspMed.Text);
+            sw.WriteLine(medico.Matricula + "," + medico.Nombre + "," + medico.NumeroEsp);
             sw.Close();
             sw.Dispose();
         }
@@ -104,10 +105,65 @@ namespace pryPonssaSP1ER._2
             if (VerificarDatosMed())
             {
                 RegistrarMedico();
+                MessageBox.Show("Médico registrado");
+                txtNombreMed.Text = "";
+                txtMatricula.Text = "";
+                txtCodEspMed.Text = "";
+                txtMatricula.Focus();
             }
             else
             {
                 MessageBox.Show("Datos incorrectos", "Error");
+            }
+        }
+
+        private void txtNombreMed_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreMed_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo se pueden ingresar letras
+            if (!Char.IsLetter(e.KeyChar) && e.KeyChar != (int)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMatricula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo se pueden ingresar numeros
+            if (!Char.IsNumber(e.KeyChar) && e.KeyChar != (int)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodEspMed_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo se pueden ingresar numeros
+            if (!Char.IsNumber(e.KeyChar) && e.KeyChar != (int)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombreEsp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo se pueden ingresar letras
+            if (!Char.IsLetter(e.KeyChar) && e.KeyChar != (int)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNumeroEsp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo se pueden ingresar numeros
+            if (!Char.IsNumber(e.KeyChar) && e.KeyChar != (int)Keys.Back)
+            {
+                e.Handled = true;
             }
         }
     }
