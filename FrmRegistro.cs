@@ -66,6 +66,9 @@ namespace pryPonssaSP1ER._2
         public void RegistrarEspecialidad()
         {
             StreamWriter sw = new StreamWriter("EspecialidadesMedicos.txt");
+            ClsEspecialidades especialidad = new ClsEspecialidades();
+            especialidad.NumeroEsp = int.Parse(txtNumeroEsp.Text);
+            especialidad.Nombre = txtNombreEsp.Text;
             sw.WriteLine();
             sw.Close();
             sw.Dispose();
@@ -73,19 +76,26 @@ namespace pryPonssaSP1ER._2
         public void RegistrarMedico()
         {
             StreamWriter sw = new StreamWriter("EspecialidadesMedicos.txt");
-            
+            ClsMedicos medico = new ClsMedicos();
+            medico.Matricula = int.Parse(txtMatricula.Text);
+            medico.Nombre = txtNombreMed.Text;
+            medico.NumeroEsp = int.Parse(txtCodEspMed.Text);
             sw.Close();
             sw.Dispose();
         }
-
-
         private void btnRegistrarEsp_Click(object sender, EventArgs e)
         {
             if (VerificarDatosEsp()) 
             {
-                ClsEspecialidades especialidad = new ClsEspecialidades();
-                especialidad.NumeroEsp = txtNumeroEsp.Text;
                 RegistrarEspecialidad();
+                MessageBox.Show("Especialidad registrada");
+                txtNumeroEsp.Text = "";
+                txtNombreEsp.Text = "";
+                txtNumeroEsp.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos", "Error");
             }
         }
 
@@ -94,6 +104,10 @@ namespace pryPonssaSP1ER._2
             if (VerificarDatosMed())
             {
                 RegistrarMedico();
+            }
+            else
+            {
+                MessageBox.Show("Datos incorrectos", "Error");
             }
         }
     }
